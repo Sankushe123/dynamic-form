@@ -1,0 +1,83 @@
+import React, { useEffect, useState } from 'react'
+import './Form.scss'
+import { useSelector } from 'react-redux'
+const Form = () => {
+    const[jsonData,setJsonData] = useState([])
+    useEffect(() => {
+        const updatedJsonString = localStorage.getItem('addSection');
+        const updatedJsonData = JSON.parse(updatedJsonString);
+        setJsonData(updatedJsonData); // Update the state variable holding the JSON data
+      }, []);
+      console.log("jsondata : ",jsonData);
+      const heading = jsonData.formTitle;
+      const fields = jsonData.formField
+      console.log(heading);
+      console.log(fields);
+
+      const renderFormFields = () => {
+        return fields.map((field, index) => {
+          switch (field.ddoption) {
+            case 'RadioButton':
+              return (
+                <div key={index}>
+                  <label>{field.label}:</label>
+                  {field.options.map((option, optionIndex) => (
+                    <div key={optionIndex}>
+                      <input
+                        type="radio"
+                        id={`${field.label}-${option}`}
+                        name={field.label}
+                        value={option}
+                        checked={formValues[field.label] === option}
+                        onChange={() => handleInputChange(field.label, option)}
+                      />
+                      <label htmlFor={`${field.label}-${option}`}>{option}</label>
+                    </div>
+                  ))}
+                </div>
+              );
+              default:
+          return null;
+      }
+    });
+  };
+    return (
+        <div>
+            <div className="formcontaier">
+                <div className="formname">
+                    <h1>{heading}</h1>
+                </div>
+                {/* <div className="formfilds">
+                    {fields?.map((user) => {
+                        switch (user.ddoption) {
+                            case 'Dropdown':
+                                console.log('Dropdown here');
+                                break;
+                            case 'RadioButton':
+                                console.log('RadioButton here');
+                                break;
+                            case 'CheckBox':
+                                console.log('CheckBox here');
+                                break;
+                            case 'TextArea':
+                                console.log('TextArea here');
+                                break;
+                            case 'TextInput':
+                                console.log('TextInput here');
+                                break;
+                            default:
+                                console.log('Default here');
+                                break;
+                        }
+                    })
+                    }
+                </div> */}
+            </div>
+       
+            
+            
+        </div>
+    )
+}
+
+export default Form

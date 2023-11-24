@@ -1,0 +1,95 @@
+.conatiner{
+    margin-top: 7vh;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(71, 71, 71);
+    .container-box{
+        padding: 2vh;
+        display: flex;
+        .left{
+            width: 70%;
+            height: fit-content;
+          
+            .optioninput{
+                width: 80%;
+                height: fit-content;
+                font-size: 16px;
+               
+               .optioninbox{
+                padding: 0;
+                height: 3vh;
+                margin-bottom: 4vh;
+                
+                
+               }
+                input{
+                   
+                    height: 3vh;
+                    margin-bottom: 0px;
+                    padding-top: 0;
+                    outline: none;
+                    width: 100%;
+
+                    font-size: 1.5rem;
+                    border: none;
+                    border-bottom: 2px solid white;
+                    
+                }::placeholder{
+                    color: rgb(131, 130, 130);
+                    font-size: 16px;
+                }
+                .closeicon{
+                    position: relative;
+                    font-size: 5vh;
+                    bottom: 4vh;
+                   float: right;
+                    color: #6666ff;
+                }
+                button{
+                    padding: 1vh 3vh;
+                    border-radius: 5px;
+                    margin-top: 0vh;
+                    outline: none;
+                    cursor: pointer;
+                    border: none;
+                    font-size: 1.1rem;
+                    color: white;
+                    background-color: #1a8cff;
+                    margin-bottom: 0vh;
+                    float: right;
+                }
+            }
+            
+        }
+        .right{
+            width: 30%;
+           
+            height: 20vh;
+            .optionsbox{
+                width: 100%;
+                font-size: 1.2rem;
+                height: 6vh;
+            }
+          
+            .savesection{
+                margin-top: 1vh;
+                button{
+                    margin-top: 2vh;
+                    padding: 1.5vh vh;
+                    width: 100%;
+                    color: white;
+                    background-color: rgb(133, 133, 132);
+                    height: 6vh;
+                    border-radius: 5px;
+                    outline: none;
+                    cursor: pointer;
+                    font-size: 1.1rem;
+                    border: none;
+                }:hover{
+                    background-color: rgb(87, 87, 86);
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+}

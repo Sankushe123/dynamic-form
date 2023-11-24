@@ -1,0 +1,43 @@
+.multicontainer{
+    margin: auto;
+    width: 100%;
+    .multifield{
+        margin-top: 3vh;
+        input{
+            width: 80%;
+            height: 4vh;
+            outline: none;
+            margin-bottom: 2vh;
+            border: none;
+            font-size: 1.2rem;
+            background-color: transparent;
+            border:2px solid #646cff;
+            padding-left: 1vh;
+            color: white;
+            padding: 5px;
+        }::placeholder{
+            color: rgb(138, 138, 138);
+        }
+    }
+    .addsectionbtn{
+        padding: 1.2vh 3vh;
+        font-size: 1rem;
+        background-color: #00e673;
+        border: none;
+        color: white;
+        font-weight: bold;
+        outline: none;
+        float: right;
+    }
+    .delbtn{
+        padding: 1.2vh 3vh;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: #ff4d4d;
+        border: none;
+        margin-left: 5px;
+        color: white;
+        outline: none;
+        float: right;
+    }
+}

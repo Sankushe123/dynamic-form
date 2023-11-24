@@ -30,3 +30,13 @@ The Dynamic Form Generator is a web application built with React.js and Redux To
 
    ```bash
    git clone https://github.com/your-username/dynamic-form-generator.git
+
+2. Install dependencies:
+
+   npm install
+
+3. Start the development server:
+
+   npm start
+
+   

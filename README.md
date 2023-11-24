@@ -36,5 +36,5 @@ The Dynamic Form Generator is a web application built with React.js and Redux To
    npm install
 
 3. Start the development server:
-  ```bash
-   npm start
+    ```bash
+     npm start
